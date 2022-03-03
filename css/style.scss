@@ -1,0 +1,1262 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+//header.home.about.contact
+header{ width: 100%; display: flex; justify-content: space-between; z-index: 20; position: fixed; padding: 15px; top:15px;
+    img{  width: 100px; left: 0; top: 100px }
+    ul{ display: flex;  width: max-content;  margin-right: 20px; 
+        li{ padding: 5px; display: inline;font-family: "kl";color: #000;
+        a{ font-size: 15px; text-decoration: none;font-family: "kl"; color: #000;}  
+    } 
+
+    }
+ }
+  //End header.home.about.contact
+  //Premium Img
+ .premium{ position: absolute; right: 0; top: 60px; position: fixed; z-index: 25;}
+//End Premium Img 
+//Hero
+.hero{justify-content: center; text-align: center; font-family: "kl"; margin-top: 100px;font-size: 15px; display: flex;
+    .inner-hero h1{justify-content:center; text-align: center; font-family: "kl";margin-top:100px;font-size: 18px;font-weight: bold;margin-bottom:50px;
+    }
+}
+.inner-hero p{justify-content:center; text-align: center; font-family: "kl"; font-size: 15px;margin-top:50px;margin-bottom:40px; width: 50vh;}
+//End Hero
+//CONTAINER
+.gallery{
+    display:flex;flex-wrap:wrap;width:90%;margin:0 auto;
+    .gallery-inner{
+        width:50%;position:relative;
+        &:hover{
+            .text{
+                max-height:100%;
+            }
+        }
+        img{
+            width:100%;
+        }
+        .text{
+            position:absolute;top:0;left:0;width:100%;height:100%;background:#ffff009d;display:flex;align-items:center;justify-content:center;max-height:0;overflow:hidden;transition:all 0.7s ease;
+        }
+    }
+}
+
+@media(min-width:768px){
+    .gallery{
+        .gallery-inner{
+            width:33%;
+        }
+    }
+}
+@media(min-width:992px){
+    .gallery{
+        .gallery-inner{
+            width:20%;
+        }
+    }
+}
+ 
+.container{display:flex;flex-wrap: wrap;width:  100%;margin-bottom:  99px;margin-top: 90px;justify-content: center;align-content: center;margin-left: 2px;}
+.flip-card { background-color: transparent; width: 100%; height: 200px; border: 1px solid #f1f1f1;perspective: 1000px; 
+    .flip-card-inner {position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d;
+        .flip-card-front{background-color: #f7f7f7;color: black;
+        } 
+    }
+}
+
+.flip-card:hover .flip-card-inner {transform: rotateY(180deg);}
+.flip-card-front, .flip-card-back {position: absolute;width: 100%;height: 100%;-webkit-backface-visibility: hidden; backface-visibility: hidden;}
+.flip-card-back { background-color: #DEC6B0; color: white; transform: rotateY(180deg);}
+//End Container
+
+//Page 2
+//About Us
+//End Home
+
+//Review Services
+.review-services {width:50%; text-align: center;display: inline-block; margin-top: 50px ;text-align: center;color: #616266; font-family: "kl";
+    .inner-services{box-shadow: #f1f1f1;max-width: 550px;margin: auto;text-align: center;display: inline-block;justify-content: space-between; margin-top: 50px; margin-left: 30px ;
+        img{ width: 40vh; align-items: center;
+          }
+          p{
+              margin-left:0; text-align: left; font-size: 15px;font-family: "kl"; margin-top: 10px;
+          }
+        }
+
+    }
+
+
+
+   .review-services .inner-services h1{margin-top: 20px; text-align: left;font-weight: bolder; font-family: "kl"; font-size: 25px;
+
+
+}
+
+//End Review
+
+
+
+//about us
+//Our Team
+.teams {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);max-width: 300px;margin: auto;text-align: left;display: inline-block;justify-content: space-between; margin-top: 50px;margin-left: 60px; margin-right: 40px; margin-bottom: 50px;
+        .title {color: #575350;font-size: 18px; text-align: left;
+          img{display: block;margin: 0 auto; width: 40%;
+   
+        }
+    }
+}
+
+
+
+.our-team{text-align: center;justify-content: center; 
+   .our h1{text-align: center;margin: 35px 50px;justify-content: center;font-family: "kl";font-weight: smooth ;margin-top:100px;margin-bottom:50px; font-size: 40px;
+    }
+     p { width:auto;margin-top:5px;margin-bottom:10px; text-align: center; margin-bottom: 10px;
+}
+} 
+ 
+
+//End Our Team      
+//Our Clients
+
+.our-clients{width: 100%;display: inline;flex-wrap: wrap;text-align: center; justify-content: center;}
+  .our-clients  h1{text-align: center;font-weight: smooth; font-size: 40px; justify-content: center;}
+   .our-clients p{text-align: center; margin-top: 30px; margin-bottom:50px; width: auto; font-size: 20px;}
+
+
+.clients{margin-top: 10px; display: inline; flex-wrap: wrap; width: 100%; justify-content: space-between;
+             img{width: 30%;justify-content: center; flex-direction: column;padding: 20px; margin-left: 40px; margin-bottom: 40px;
+
+             }
+}
+
+ 
+
+ 
+// End Our Clients
+
+
+
+
+
+
+
+
+
+//End About
+
+//Contact Us
+
+.contact-us{text-align: center; align-items: center;
+    h1{font-size: 18px;font-weight: bolder; margin-top: 25px;margin-bottom: 25px; font-family: "kl";
+        
+    }
+
+}
+.newsletter{margin-top: 25px; margin-bottom: 25px;
+   
+    .submit{width: 250px;height: 30px;align-items: center;background-color: #E3A630;border:#E3A630;
+    p{font-size: 15px; color: #f7f7ff; width: 100%
+    }
+}
+
+    .subb{align-items: center;}
+   
+    #subject{ width: 250px;height: 30px;margin-bottom: 10px; ;}
+
+    .mess{align-items: center;}
+    #message{width: 250px;height: 90px; margin-bottom: 10px;resize: none;
+    }
+.emailss{ width: 100%; align-items: center;
+    #email{ width: 110px;height: 30px;justify-content: space-between;margin-right: 12px;  margin-bottom: 10px;}
+        #name{height: 30px;width: 110px;justify-content: space-between;margin-left: 7px; margin-bottom: 10px;
+        }
+    
+
+}
+
+
+}
+
+//End Contact Us
+
+
+
+
+
+
+
+
+
+
+//Contact
+
+
+
+//Find Us
+
+    .find-us{width: 98%; display: flex; margin: 0 auto; flex-direction: row; justify-content: center; max-height: 80vh;
+    .infor{ display: flex; flex-direction: column; width: 70%; height: 80vh; background-color: #393939; margin: 0 auto;justify-content: center; align-items: center;}
+    .us{ flex-direction: column; margin: 20px auto; display: flex; justify-content: center; align-items: center;
+        h1{text-align: center; font-weight: bolder; color: #f7f7f7;font-family: "kl";padding-top: 20px; margin-bottom: 10px; flex-direction: column;
+            
+        }
+        p{
+            text-align: center;margin-bottom: 2px; flex-direction: column; 
+        }
+        i{ text-align: center; color: #f7f7f7;  margin: 0 auto; }
+    }
+    
+}
+.find{width: 50%;
+    img{width: 100%;height: 100%}
+
+    }
+
+
+
+
+
+
+    // END Find Us
+
+
+
+
+
+
+ 
+//footer
+
+
+footer{background-color:#393939;text-align: center;padding: 50px;margin-top:0px;}
+      .inner-footer{ flex-direction: column;text-align:center;width: 100%; display: inline; flex-wrap: wrap;
+                
+            }
+footer h1{font-family: "kl";margin-bottom: 5px;text-align: center; font-size: large;flex-direction: row;color: #f7f7ff; margin-top: 10px;}
+footer p{font-family: "kl";margin-bottom: 5px;text-align: center; font-size: small;flex-direction: row; color: #616266;}
+
+.address { margin-bottom: 3px; margin:0px auto;}
+
+   footer .ff a{ text-decoration:  none; color: #616266; margin-left: 25px; margin-bottom: 100px;} 
+
+ hr{width: 100%; color: #575350;
+}
+.copy a { text-decoration:  none; color: #616266;}
+
+
+
+
+
+
+ 
+
+//End Foter
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+//Media Query 1
+@media(min-width:568px){
+    /* when a phone is tilted, starting from the smallest screen that is iphone 5s titled to landscape mode  */
+    // body{
+    //     background:rgb(235, 0, 0);
+    // }
+
+
+//header.home.about.contact
+header{ width: 100%; display: flex; justify-content: space-between; z-index: 20; position: fixed; padding: 15px; top:15px;
+    img{  width: 100px; left: 0; top: 100px }
+    ul{ display: flex;  width: max-content;  margin-right: 20px; 
+        li{ padding: 5px; display: inline;font-family: "kl";color: #000;
+        a{ font-size: 15px; text-decoration: none;font-family: "kl"; color: #000;}   
+    } 
+
+    }
+ }
+  //End header.home.about.contact
+  //Premium Img
+ .premium{ position: absolute; right: 0; top: 60px; position: fixed; z-index: 25;}
+//End Premium Img 
+//Hero
+.hero{justify-content: center; text-align: center; font-family: "kl"; margin-top: 100px;font-size: 15px; display: flex;
+    .inner-hero h1{justify-content:center; text-align: center; font-family: "kl";margin-top:100px;font-size: 18px;font-weight: bold;margin-bottom:50px;
+    }
+}
+.inner-hero p{justify-content:center; text-align: center; font-family: "kl"; font-size: 15px;margin-top:50px;margin-bottom:40px; width: 40vh;}
+//End Hero
+
+
+
+
+
+   
+    // Home container
+.container{display: flex;flex-wrap: wrap;width: 100%; margin-left: 0px;}
+    .flip-card {background-color: transparent;width: 300px;height: 200px;border: 1px solid #f1f1f1; perspective: 1000px; }
+       .flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.8s;transform-style: preserve-3d;}
+          .flip-card:hover .flip-card-inner {transform: rotateY(180deg);}
+     .flip-card-front, .flip-card-back {position: absolute; height: 100%; width: 100%;-webkit-backface-visibility: hidden; backface-visibility: hidden;}
+   .flip-card-front {background-color: #bbb;color: black;}
+  .flip-card-back {background-color: #DEC6B0; color: white;transform: rotateY(180deg)}
+  
+  
+
+// Home End container
+
+//Page 2
+
+
+//About Us
+
+// Review Services 
+
+.review-services {width:100%; text-align: center;display: inline-block; margin-top: 50px ;text-align: center;color: #616266; font-family: "kl";
+    .inner-services{box-shadow: #f1f1f1;max-width: 550px;margin: auto;text-align: center;display: inline-block;justify-content: space-between; margin-top: 50px; margin-left: 30px ;
+        img{ width: 60vh; align-items: center;
+          }
+          p{
+              margin-left:0; text-align: left; font-size: 20px;font-family: "kl";
+          }
+        }
+
+    }
+
+
+
+   .review-services .inner-services h1{margin-top: 20px; text-align: left;font-weight: bolder; font-family: "kl"; font-size: 25px;
+
+
+}
+
+//End Review
+
+//Our Team
+.teams {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 150px;margin: auto;text-align: left;display: inline-block;justify-content: space-between; margin-top: 50px;  margin-bottom: 50px; margin-left: 55px;  margin-right: 20px;
+        .title {color: #575350;font-size: 18px; text-align: left;
+               img{display: block;margin: 0 auto; width: 40%; flex-direction: column; grid: 30px; 
+            
+        
+        }
+    }
+}
+
+
+
+.our{text-align: center;justify-content: center;}
+   .our h1 {text-align: center;margin: 35px 50px;font-family: "kl";font-weight: smooth ;margin-top:100px;margin-bottom:50px; 
+      }
+   .our  p {margin-top:5px;margin-bottom:10px; text-align: center; margin-bottom: 10px;width: 100%;
+       
+        
+ 
+    } 
+ 
+
+//End Our Team 
+
+
+
+
+
+
+
+//Our Clients
+
+.our-clients{width: 100%;display: flex;flex-wrap: wrap;text-align: left; }
+  .our-clients  h1{text-align: center;font-weight: smooth; font-size: 40px; justify-content: center;}
+   .our-clients p{text-align: center;font-family: "kl"; margin-top: 30px; margin-bottom:50px; width: 100%;}
+
+
+.clients{margin-top: 10px; display: inline; flex-wrap: wrap; width: 50%; justify-content: space-between;
+             img{width: 35%;justify-content: center; flex-direction: column;padding: 10px; margin-left: 50px; margin-bottom: 40px;
+
+             }
+}
+
+ 
+
+ 
+// End Our Clients
+    
+    
+
+
+    
+    // Home container
+.container{display: flex;flex-wrap: wrap;width: 85%; margin-left: 20px;}
+    .flip-card {background-color: transparent;width: 300px;height: 200px;border: 1px solid #f1f1f1; perspective: 1000px; }
+       .flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.8s;transform-style: preserve-3d;}
+          .flip-card:hover .flip-card-inner {transform: rotateY(180deg);}
+     .flip-card-front, .flip-card-back {position: absolute; height: 100%; width: 100%;-webkit-backface-visibility: hidden; backface-visibility: hidden;}
+   .flip-card-front {background-color: #bbb;color: black;}
+  .flip-card-back {background-color: #DEC6B0; color: white;transform: rotateY(180deg)}
+  
+  
+
+// Home End container
+
+//Contact Us
+
+.contact-us{text-align: center; align-items: center;
+    h1{font-size: 18px;font-weight: bolder; margin-top: 25px;margin-bottom: 25px; font-family: "kl";
+        
+    }
+
+}
+.newsletter{margin-top: 25px; margin-bottom: 25px;
+   
+    .submit{width: 250px;height: 30px;align-items: center;background-color: #E3A630;border:#E3A630;
+    p{font-size: 15px; color: #f7f7ff; width: 100%
+    }
+}
+
+    .subb{align-items: center;}
+   
+    #subject{ width: 250px;height: 30px;margin-bottom: 10px; ;}
+
+    .mess{align-items: center;}
+    #message{width: 250px;height: 90px; margin-bottom: 10px;resize: none;
+    }
+.emailss{ width: 100%; align-items: center;
+    #email{ width: 110px;height: 30px;justify-content: space-between;margin-right: 12px;  margin-bottom: 10px;}
+        #name{height: 30px;width: 110px;justify-content: space-between;margin-left: 7px; margin-bottom: 10px;
+        }
+    
+
+}
+
+
+}
+
+//End Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+//Find Us
+.find-us{width: 98%; display: flex; margin: 0 auto; flex-direction: row; justify-content: center; max-height: 60vh;
+    .infor{ display: flex; flex-direction: column; width: 50%; height: 60vh; background-color: #393939; margin: 0 auto;justify-content: center; align-items: center;}
+    .us{ flex-direction: column; margin: 20px auto; display: flex; justify-content: center; align-items: center;
+        h1{text-align: center; font-weight: bolder; color: #f7f7f7;font-family: "kl";padding-top: 20px; margin-bottom: 10px; flex-direction: column;
+            
+        }
+        p{
+            text-align: center;margin-bottom: 2px; flex-direction: column; 
+        }
+        i{ text-align: center; color: #f7f7f7;  margin: 0 auto; }
+    }
+    
+}
+
+.find{width: 50%;
+    img{width: 100%;height: 100%}
+
+    }
+
+
+    // END Find Us
+
+
+
+
+
+
+
+
+//footer
+
+
+footer{background-color:#393939;text-align: center;padding: 50px;margin-top:0px;}
+          .inner-footer{ flex-direction: row;text-align:center;width: 100%; display:flex;
+                
+            }
+footer h1{ display:flex; justify-content: center; font-family: "kl";margin-bottom: 5px;text-align: center; font-size: large;flex-direction: row;color: #f7f7ff; margin-top: 60px; margin-bottom: 30px;}
+footer p{font-family: "kl";margin-bottom: 5px;text-align: center; font-size: small;flex-direction: row; color: #616266;}
+
+.address { margin-bottom: 3px; margin:0px auto;} 
+
+   footer .ff a{ text-decoration:  none; color: #616266; margin-left: 25px; margin-bottom: 100px;}         
+        
+  footer hr{width: 100%; color: #bbb; margin-top: 50px; 
+}
+.copy a { text-decoration:  none; color: #616266; }
+
+
+
+
+
+
+
+
+
+
+
+
+//End Foter
+
+
+
+
+
+
+
+
+
+    
+}
+
+
+
+//Media Query 2
+@media(min-width:768px){
+    /* when one is using an ipad or a bigger phone will have these styles  */
+    // body{
+    //     background:rgb(9, 255, 0);
+    // }
+
+//header.home.about.contact
+header{ width: 100%; display: flex; justify-content: space-between; z-index: 20; position: fixed; padding: 15px; top:15px;
+    img{  width: 20vh; left: 0; top: 100px }
+    ul{ display: flex;  width: max-content;  margin-right: 20px; 
+        li{ padding: 5px; display: inline;font-family: "kl"; font-size: 25;color: #000;
+        a{ font-size: 20px; text-decoration: none;font-family: "kl"; color: #000;}  
+    } 
+
+    }
+ }
+  //End header.home.about.contact
+  //Premium Img
+ .premium{ position: absolute; right: 0; top: 60px; position: fixed; z-index: 25;}
+//End Premium Img 
+//Hero
+.hero{justify-content: center; text-align: center; font-family: "kl"; margin-top: 100px;font-size: 15px; display: flex;
+    .inner-hero h1{justify-content:center; text-align: center; font-family: "kl";margin-top:100px;font-size: 28px;font-weight: bold;margin-bottom:50px;
+    }
+}
+.inner-hero p{justify-content:center; text-align: center; font-family: "kl"; font-size: 20px;margin-top:50px;margin-bottom:40px;}
+//End Hero
+
+
+
+
+
+   
+    // Home container
+.container{display: flex;flex-wrap: wrap;width: 100%; margin-left: 0px;}
+    .flip-card {background-color: transparent;width: 300px;height: 200px;border: 1px solid #f1f1f1; perspective: 1000px; }
+       .flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.8s;transform-style: preserve-3d;}
+          .flip-card:hover .flip-card-inner {transform: rotateY(180deg);}
+     .flip-card-front, .flip-card-back {position: absolute; height: 100%; width: 100%;-webkit-backface-visibility: hidden; backface-visibility: hidden;}
+   .flip-card-front {background-color: #bbb;color: black;}
+  .flip-card-back {background-color: #DEC6B0; color: white;transform: rotateY(180deg)}
+  
+  
+
+// Home End container
+
+//Page 2
+
+
+//About Us
+
+// Review Services 
+
+.review-services {width:100%; text-align: center;display: inline-block; margin-top: 50px ;text-align: center;color: #616266; font-family: "kl";
+    .inner-services{box-shadow: #f1f1f1;max-width: 550px;margin: auto;text-align: center;display: inline-block;justify-content: space-between; margin-top: 50px; margin-left: 30px ;
+        img{ width: 60vh; align-items: center;
+          }
+          p{
+              margin-left:0; text-align: left; font-size: 20px;font-family: "kl";
+          }
+        }
+
+    }
+
+
+
+   .review-services .inner-services h1{margin-top: 20px; text-align: left;font-weight: bolder; font-family: "kl"; font-size: 25px;
+
+
+}
+
+//End Review
+
+//Our Team
+.teams {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 150px;margin: auto;text-align: left;display: inline-block;justify-content: space-between; margin-top: 50px;  margin-bottom: 50px; margin-left: 55px;  margin-right: 20px;
+        .title {color: #575350;font-size: 18px; text-align: left;
+               img{display: block;margin: 0 auto; width: 40%; flex-direction: column; grid: 30px; 
+            
+        
+        }
+    }
+}
+
+
+
+.our{text-align: center;justify-content: center;}
+   .our h1 {text-align: center;margin: 35px 50px;font-family: "kl";font-weight: smooth ;margin-top:100px;margin-bottom:50px; 
+      }
+   .our  p {margin-top:5px;margin-bottom:10px; text-align: center; margin-bottom: 10px;width: 100%;
+       
+        
+ 
+    } 
+ 
+
+//End Our Team 
+
+
+
+
+
+
+
+//Our Clients
+
+.our-clients{width: 100%;display: flex;flex-wrap: wrap;text-align: left; }
+  .our-clients  h1{text-align: center;font-weight: smooth; font-size: 40px; justify-content: center;}
+   .our-clients p{text-align: center;font-family: "kl"; margin-top: 30px; margin-bottom:50px; width: 100%;}
+
+
+.clients{margin-top: 10px; display: inline; flex-wrap: wrap; width: 50%; justify-content: space-between;
+             img{width: 35%;justify-content: center; flex-direction: column;padding: 10px; margin-left: 50px; margin-bottom: 40px;
+
+             }
+}
+
+
+ 
+// End Our Clients
+
+//Contact Us
+
+.contact-us{text-align: center; align-items: center;
+    h1{font-size: 18px;font-weight: bolder; margin-top: 25px;margin-bottom: 25px; font-family: "kl";
+        
+    }
+
+}
+.newsletter{margin-top: 25px; margin-bottom: 25px;
+   
+    .submit{width: 510px;height: 30px;align-items: center;background-color: #E3A630;border:#E3A630;
+    p{font-size: 15px; color: #f7f7ff; width: 100%
+    }
+}
+
+    .subb{align-items: center;}
+   
+    #subject{ width: 500px;height: 30px;margin-bottom: 10px; ;}
+
+    .mess{align-items: center;}
+    #message{width: 500px;height: 90px; margin-bottom: 10px;resize: none;
+    }
+.emailss{ width: 100%; align-items: center;
+    #email{ width: 235px;height: 30px;justify-content: space-between;margin-right: 12px;  margin-bottom: 10px;}
+        #name{height: 30px;width: 235px;justify-content: space-between;margin-left: 7px; margin-bottom: 10px;
+        }
+    
+
+}
+
+
+}
+
+//End Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+//Find Us
+.find-us{width: 98%; display: flex; margin: 0 auto; flex-direction: row; justify-content: center; max-height: 60vh;
+    .infor{ display: flex; flex-direction: column; width: 50%; height: 60vh; background-color: #393939; margin: 0 auto;justify-content: center; align-items: center;}
+    .us{ flex-direction: column; margin: 20px auto; display: flex; justify-content: center; align-items: center;
+        h1{text-align: center; font-weight: bolder; color: #f7f7f7;font-family: "kl";padding-top: 20px; margin-bottom: 10px; flex-direction: column;
+            
+        }
+        p{
+            text-align: center;margin-bottom: 2px; flex-direction: column; 
+        }
+        i{ text-align: center; color: #f7f7f7;  margin: 0 auto; }
+    }
+    
+}
+
+.find{width: 50%;
+    img{width: 100%;height: 100%}
+
+    }
+
+
+    //END Find Us
+
+
+
+
+
+
+
+
+  
+//footer
+
+
+footer{background-color:#393939;text-align: center;padding: 50px;margin-top:0px;}
+            .inner-footer{ flex-direction: row;text-align:center;width: 100%; display:flex;
+                
+            }
+footer h1{ display:flex; justify-content: center; font-family: "kl";margin-bottom: 5px;text-align: center; font-size: large;flex-direction: row;color: #f7f7ff; margin-top: 60px; margin-bottom: 30px;}
+footer p{font-family: "kl";margin-bottom: 5px;text-align: center; font-size: small;flex-direction: row; color: #616266;}
+
+.address { margin-bottom: 3px; margin:0px auto;} 
+
+   footer .ff a{ text-decoration:  none; color: #616266; margin-left: 25px; margin-bottom: 100px;}         
+        
+  footer hr{width: 100%; color: #bbb; margin-top: 50px; 
+}
+.copy a { text-decoration:  none; color: #616266; }
+
+
+
+
+
+
+
+
+
+
+//End Foter
+
+}
+
+
+
+
+//Media Query 3
+@media(min-width:992px){
+    /* when you are using an ipad pro or bigger phone will be affected by these styles  */
+    // body{
+    //     background:rgb(38, 0, 255);
+    // }
+
+
+    
+//header.home.about.contact
+header{ width: 100%; display: flex; justify-content: space-between; z-index: 20; position: fixed; padding: 15px; top:15px;
+    img{  width: 100px; left: 0; top: 100px }
+    ul{ display: flex;  width: max-content;  margin-right: 20px; 
+        li{ padding: 5px; display: inline;font-family: "kl";color: #000;
+        a{ font-size: 15px; text-decoration: none;font-family: "kl"; color: #000;}  
+    } 
+
+    }
+ }
+  //End header.home.about.contact
+  //Premium Img
+ .premium{ position: absolute; right: 0; top: 60px; position: fixed; z-index: 25;}
+//End Premium Img 
+//Hero
+.hero{justify-content: center; text-align: center; font-family: "kl"; margin-top: 100px;font-size: 15px; display: flex;
+.inner-hero h1{justify-content:center; text-align: center; font-family: "kl";margin-top:100px;font-size: 18px;font-weight: bold;margin-bottom:50px;
+.inner-hero p{justify-content:center; text-align: center; font-family: "kl"; font-size: 15px;margin-top:50px;margin-bottom:40px;}
+}
+}
+//End Hero
+
+
+     
+    // Home container
+.container{display: flex;flex-wrap: wrap;width: 100%; margin-left: 0px;}
+    .flip-card {background-color: transparent;width: 300px;height: 200px;border: 1px solid #f1f1f1; perspective: 1000px; }
+       .flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.8s;transform-style: preserve-3d;}
+          .flip-card:hover .flip-card-inner {transform: rotateY(180deg);}
+     .flip-card-front, .flip-card-back {position: absolute; height: 100%; width: 100%;-webkit-backface-visibility: hidden; backface-visibility: hidden;}
+   .flip-card-front {background-color: #bbb;color: black;}
+  .flip-card-back {background-color: #DEC6B0; color: white;transform: rotateY(180deg)}
+  
+  
+
+// Home End container
+
+//Page 2
+
+
+//About Us
+
+/// Review Services 
+
+.review-services {width:100%; text-align: center;display: inline-block; margin-top: 50px ;text-align: center;color: #616266; font-family: "kl";
+    .inner-services{box-shadow: #f1f1f1;max-width: 550px;margin: auto;text-align: center;display: inline-block;justify-content: space-between; margin-top: 50px; margin-left: 30px ;
+        img{ width: 60vh; align-items: center;
+          }
+          p{
+              margin-left:0; text-align: left; font-size: 20px;font-family: "kl";
+          }
+        }
+
+    }
+
+
+
+   .review-services .inner-services h1{margin-top: 20px; text-align: left;font-weight: bolder; font-family: "kl"; font-size: 25px;
+
+
+}
+
+//End Review
+
+//Our Team
+.teams {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 150px;margin: auto;text-align: left;display: inline-block;justify-content: space-between; margin-top: 50px;  margin-bottom: 50px; margin-left: 55px;  margin-right: 20px;
+        .title {color: #575350;font-size: 18px; text-align: left;
+               img{display: block;margin: 0 auto; width: 40%; flex-direction: column; grid: 30px; 
+            
+        
+        }
+    }
+}
+
+
+
+.our{text-align: center;justify-content: center;}
+   .our h1 {text-align: center;margin: 35px 50px;font-family: "kl";font-weight: smooth ;margin-top:100px;margin-bottom:50px; 
+      }
+   .our  p {margin-top:5px;margin-bottom:10px; text-align: center; margin-bottom: 10px;width: 100%;
+       
+        
+ 
+    } 
+ 
+
+//End Our Team 
+
+
+
+
+
+
+
+//Our Clients
+
+.our-clients{width: 100%;display: flex;flex-wrap: wrap;text-align: left; }
+  .our-clients  h1{text-align: center;font-weight: smooth; font-size: 40px; justify-content: center;}
+   .our-clients p{text-align: center;font-family: "kl"; margin-top: 30px; margin-bottom:50px; width: 100%;}
+
+
+.clients{margin-top: 10px; display: inline; flex-wrap: wrap; width: 50vh; justify-content: space-between;
+             img{width: 35%;justify-content: center; flex-direction: column; margin-bottom: 40px; padding: 20px; 
+
+             }
+}
+
+ 
+// End Our Clients
+
+//Contact Us
+
+.contact-us{text-align: center; align-items: center;
+    h1{font-size: 25px;font-weight: bolder; margin-top: 25px;margin-bottom: 25px; font-family: "kl";
+        
+    }
+
+}
+.newsletter{margin-top: 25px; margin-bottom: 25px;
+   
+    .submit{width: 507px;height: 30px;align-items: center;background-color: #E3A630;border:none;
+    p{font-size: 15px; color: #f7f7ff; width: 100%
+    }
+}
+
+    .subb{align-items: center;}
+   
+    #subject{ width: 500px;height: 30px;margin-bottom: 10px;}
+
+    .mess{align-items: center;}
+    #message{width: 500px;height: 90px; margin-bottom: 10px;resize: none;
+    }
+.emailss{ width: 100%; align-items: center;
+    #email{ width: 235px;height: 30px;justify-content: space-between;margin-right: 12px;  margin-bottom: 10px;}
+        #name{height: 30px;width: 235px;justify-content: space-between;margin-left: 7px; margin-bottom: 10px;
+        }
+    
+
+}
+
+
+
+}
+
+//End Contact Us
+
+
+
+
+
+
+
+
+
+//Find Us
+.find-us{width: 98%; display: flex; margin: 0 auto; flex-direction: row; justify-content: center; max-height: 60vh;
+    .infor{ display: flex; flex-direction: column; width: 50%; height: 60vh; background-color: #393939; margin: 0 auto;justify-content: center; align-items: center;}
+    .us{ flex-direction: column; margin: 20px auto; display: flex; justify-content: center; align-items: center;
+        h1{text-align: center; font-weight: bolder; color: #f7f7f7;font-family: "kl";padding-top: 20px; margin-bottom: 10px; flex-direction: column;
+            
+        }
+        p{
+            text-align: center;margin-bottom: 2px; flex-direction: column; 
+        }
+        i{ text-align: center; color: #f7f7f7;  margin: 0 auto; }
+    }
+    
+}
+
+.find{width: 50%;
+    img{width: 100%;height: 100%}
+
+    }
+
+
+    // END Find Us
+
+
+
+
+
+
+
+//footer
+
+
+footer{background-color:#393939;text-align: center;padding: 50px;margin-top:0px;}
+             .inner-footer{ flex-direction: row;text-align:center;width: 100%; display:flex;
+                
+            }
+footer h1{ display:flex; justify-content: center; font-family: "kl";margin-bottom: 5px;text-align: center; font-size: large;flex-direction: row;color: #f7f7ff; margin-top: 60px; margin-bottom: 30px;}
+footer p{font-family: "kl";margin-bottom: 5px;text-align: center; font-size: small;flex-direction: row; color: #616266;}
+
+.address { margin-bottom: 3px; margin:0px auto;} 
+
+   footer .ff a{ text-decoration:  none; color: #616266; margin-left: 25px; margin-bottom: 100px;}         
+        
+  footer hr{width: 100%; color: #bbb; margin-top: 50px; 
+}
+.copy a { text-decoration:  none; color: #616266; }
+
+
+
+
+
+
+//End Footer
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+//Media Query 4
+@media(min-width:1200px){
+    /* when someone is using a laptop or a bigger device will be affected by these styles */
+    // body{
+    //     background:rgb(224, 210, 1);
+    // }
+
+ 
+//header.home.about.contact
+header{ width: 100%; display: flex; justify-content: space-between; z-index: 20; position: fixed; padding: 15px; top:15px;
+    img{ width: 200px; left: 0; top: 100px }
+    ul{ display: flex;  width: max-content;  margin-right: 20px; 
+        li{ padding: 5px; display: inline;font-family: "kl"; color: #000;
+        a{ font-size: 25px; text-decoration: none;font-family: "kl"; color: #000;}  
+    } 
+
+    }
+ }
+  //End header.home.about.contact
+  //Premium Img
+ .premium{ position: absolute; right: 0; top: 60px; position: fixed; z-index: 25;}
+//End Premium Img 
+//Hero
+.hero{justify-content: center; text-align: center; font-family: "kl"; margin-top: 100px;font-size: 15px; display: flex;
+.inner-hero h1{justify-content:center; text-align: center; font-family: "kl";margin-top:100px;font-size: 18px;margin-bottom:50px; font-size: 50px;}
+}
+.inner-hero p{justify-content:center; text-align: center; font-family: "kl"; font-size: 20px;margin-top:50px;margin-bottom:40px; width: 100vh; 
+}
+
+
+
+//End Hero
+
+
+
+  
+    // Home container
+.container{display: flex;flex-wrap: wrap;width: 90%; margin-left: 80px; margin-right: 40;}
+    .flip-card {background-color: transparent;width: 300px;height: 200px;border: 1px solid #f1f1f1; perspective: 1000px; }
+       .flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.8s;transform-style: preserve-3d;}
+          .flip-card:hover .flip-card-inner {transform: rotateY(180deg);}
+     .flip-card-front, .flip-card-back {position: absolute; height: 100%; width: 100%;-webkit-backface-visibility: hidden; backface-visibility: hidden;}
+   .flip-card-front {background-color: #bbb;color: #000;}
+  .flip-card-back {background-color: #DEC6B0; color: white;transform: rotateY(180deg)}
+  
+  
+
+// Home End container
+
+//Page 2
+//About Us
+
+// Review Services 
+
+.review-services {width:100%; text-align: center;display: inline-block; margin-top: 50px ;text-align: center;color: #616266; font-family: "kl";
+    .inner-services{box-shadow: #f1f1f1;max-width: 550px;margin: auto;text-align: center;display: inline-block;justify-content: space-between; margin-top: 50px; margin-left: 30px ;
+        img{ width: 100%; align-items: center; 
+          p{
+              margin-left:0; text-align: left; font-size: 15px;font-family: "kl";
+          }
+        }
+
+    }
+
+
+}
+   .review-services .inner-services h1{margin-top: 20px; text-align: left;font-weight: bolder; font-family: "kl"; font-size: 25px;
+
+
+}
+
+
+//End Review
+
+//Our Team
+.teams {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 300px;margin: auto;text-align: left;display: inline-block;justify-content: space-between; margin-top: 50px;margin-left: 60px; margin-right: 40px; margin-bottom: 50px;
+    img{display: block;margin: 0 auto; width: 40%;
+        .title {color: #575350;font-size: 18px;
+            
+        }
+    }
+}
+
+
+
+.our-team{text-align: center;justify-content: center; 
+   .our h1 p{text-align: center;margin: 35px 50px;justify-content: center;font-family: "kl";font-weight: smooth ;margin-top:100px;margin-bottom:50px; font-size: 40px;
+    }
+     p { width:auto;margin-top:5px;margin-bottom:10px; text-align: center; margin-bottom: 10px;
+}
+} 
+ 
+
+//End Our Team      
+//Our Clients
+
+.our-clients{width: 100%;display: inline;flex-wrap: wrap;text-align: center; justify-content: center;}
+  .our-clients  h1{text-align: center;font-weight: smooth; font-size: 40px; justify-content: center;}
+   .our-clients p{text-align: center;font-family: "kl"; margin-top: 30px; margin-bottom:50px;}
+
+
+.clients{margin-top: 10px; display: inline; flex-wrap: wrap; width: 100%; justify-content: space-between;
+             img{width: 10vh;justify-content: center; flex-direction: column;padding: 40px; margin-left: 110px; margin-bottom: 40px;
+
+             }
+}
+ 
+ 
+
+ 
+// End Our Clients
+
+
+
+
+
+
+
+
+
+//End About
+
+
+//Contact Us
+
+.contact-us{text-align: center; align-items: center;
+    h1{font-size: 25px;font-weight: bolder; margin-top: 25px;margin-bottom: 25px; font-family: "kl";
+        
+    }
+
+}
+.newsletter{margin-top: 25px; margin-bottom: 25px;
+   
+    .submit{width: 507px;height: 30px;align-items: center;background-color: #E3A630;border:#E3A630;
+    p{font-size: 15px; color: #f7f7ff; width: 100%
+    }
+}
+
+    .subb{align-items: center;}
+   
+    #subject{ width: 500px;height: 30px;margin-bottom: 10px;}
+
+    .mess{align-items: center;}
+    #message{width: 500px;height: 90px; margin-bottom: 10px;resize: none;
+    }
+.emailss{ width: 100%; align-items: center;
+    #email{ width: 235px;height: 30px;justify-content: space-between;margin-right: 12px;  margin-bottom: 10px;}
+        #name{height: 30px;width: 235px;justify-content: space-between;margin-left: 7px; margin-bottom: 10px;
+        }
+    
+
+}
+
+
+
+}
+
+//End Contact Us
+
+//Find Us
+.find-us{width: 98%; display: flex; margin: 0 auto; flex-direction: row; justify-content: center; max-height: 80vh;
+    .infor{ display: flex; flex-direction: column; width: 50%; height: 80vh; background-color: #393939; margin: 0 auto;justify-content: center; align-items: center;}
+    .us{ flex-direction: column; margin: 20px auto; display: flex; justify-content: center; align-items: center;
+        h1{text-align: center; font-weight: bolder; color: #f7f7f7;font-family: "kl";padding-top: 20px; margin-bottom: 10px; flex-direction: column;
+            
+        }
+        p{
+            text-align: center;margin-bottom: 2px; flex-direction: column; 
+        }
+        i{ text-align: center; color: #f7f7f7;  margin: 0 auto; }
+    }
+    
+}
+
+.find{width: 50%;
+    img{width: 100%;height: 100%}
+
+    }
+
+
+    // END Find Us
+
+//footer
+
+ footer{background-color:#393939;text-align: center;padding: 50px;margin-top:0px; text-decoration: none; }
+       .inner-footer{ flex-direction: row;text-align:center;width: 100%; display:flex;
+                
+            }
+footer h1{ display:flex; justify-content: center; font-family: "kl";margin-bottom: 5px;text-align: center; font-size: large;flex-direction: row;color: #f7f7ff; margin-top: 100px; margin-bottom: 30px;}
+footer p{font-family: "kl";margin-bottom: 5px;text-align: center; font-size: small;flex-direction: row; color: #616266;}
+
+.address { margin-bottom: 3px; margin:0px auto;} 
+
+   footer .ff a{ text-decoration:  none; color: #616266; margin-left: 25px; margin-bottom: 100px;}         
+        
+  footer hr{width: 100%; color: #bbb; margin-top: 50px; 
+}
+.copy a { text-decoration:  none; color: #616266; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //End Footer
+
+}
+
